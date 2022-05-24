@@ -1,0 +1,67 @@
+@use "util" as u;
+
+.main {
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 51rem;
+        height: 90rem;
+        z-index: -1;
+    }
+
+    &::before {
+        top: -20rem;
+        left: -9rem;
+        background: u.$cg-LG220dg;
+        border-radius: 0 0 25.5rem 25.5rem;
+        transition: all .4s ease-in-out;
+
+        @include u.bp(md) {
+            top: -35rem;
+            left: -25.5rem;  
+        }
+
+        @include u.bp(sm) {
+            top: -37rem;
+            left: -32rem;         
+        }
+    }
+
+    &::after {
+        bottom: -22rem;
+        right: -18.5rem;
+        background: hsla(264, 100%, 61%, 0.02);
+        border-radius: 25.5rem 25.5rem 0 0;
+        transition: all .4s ease-in-out;
+
+        @include u.bp(md) {
+            bottom: -45rem;
+            right: -25.5rem;
+        }
+
+        @include u.bp(sm) {
+            bottom: -37rem;
+            right: -32rem;
+        }
+    }
+}
+
+.container {
+    width: 96rem;
+    height: 60rem;
+    margin: auto;
+
+    @include u.bp(md) {
+        min-width: 37.5rem;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;  
+    }
+}

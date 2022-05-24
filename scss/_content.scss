@@ -1,0 +1,253 @@
+@use "util" as u;
+
+// phone
+.content_phone {
+    width: 24.7rem;
+    height: 50.5rem;
+    margin: auto 12.3rem;
+    background-color: u.$c-White;
+    border-radius: 3rem;
+    box-shadow: 0 2.5rem 4rem 0 hsla(271, 15%, 43%, 0.22);
+
+    @include u.bp(md) {
+        margin: 7rem auto;
+    }
+
+    // screen
+    .screen {
+        width: 22.8rem;
+        height: 48.5rem;
+        margin: auto;
+        padding-top: 0.1rem;
+        background-color: u.$c-LightGrayishViolet;
+        border-radius: 2rem;
+
+        // screen header
+        &__header {
+            position: relative;
+            width: 100%;
+            height: 6.6rem;
+            background: u.$cg-LGtoLeft;
+            border-radius: 2rem 2rem 0.6rem 0.6rem;
+            color: u.$c-White;
+            display: flex;
+            align-items: flex-end;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -0.1rem;
+                left: 50%;
+                width: 12.9rem;
+                height: 1.9rem;
+                transform: translateX(-50%);
+                background-color: u.$c-White;
+                border-radius: 0 0 1.4rem 1.4rem;      
+            }
+
+            &__info {
+                width: 100%;
+                height: 4.6rem;
+                display: grid;
+                grid-template-columns: 2.5rem 1fr 2.3rem;
+                align-items: center;
+
+                .bx {
+
+                    &-chevron-left {
+                        justify-content: flex-end;
+                        transform: scaleY(1.4);
+                    }
+
+                    &-dots-vertical-rounded {
+                        transform: scaleY(1.1);
+                    }
+                }
+    
+                .center {    
+                    padding: 0 0.2rem;
+                    column-gap: 0.9rem;
+    
+                    img {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border-radius: 50%;
+                        border: 0.1rem solid u.$c-White;
+                    }
+
+                    .name-field {
+
+                        .name {
+                            color: u.$c-LightGrayishViolet;
+                            font-size: 1.1rem;
+                            letter-spacing: 0.02rem;
+                            margin-bottom: 0.1rem;
+                        }
+
+                        .status {
+                            color: u.$c-PaleViolet;
+                            font-size: 1rem;
+                            transform: scale(0.8) translateX(-1rem);
+                        }
+                    }
+                }
+            }           
+        }
+
+        // chat screen
+        &__main {
+            position: relative;
+            max-width: 100%;
+            height: 41.9rem;
+            padding: 0.7rem 0;
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+
+            .chat-right {
+                height: 11.5rem;
+                margin-top: 0.6rem;
+                align-items: flex-end;
+            }
+
+            .chat-left2 {
+                height: 13.5rem;
+                margin-top: 0.1rem;
+            }
+
+            .msg {
+                max-width: 16rem;
+                height: auto;
+                padding: 0.7rem 1rem; 
+                font-size: 1rem;
+                line-height: 1.4rem;                           
+
+                &-left {
+                    color: u.$c-ModerateViolet;
+                    background-color: hsla(276, 55%, 52%, 0.1);
+                    border-radius: 1.2rem 1.2rem 1.2rem 0.4rem;
+                    transform: scale(0.8) translateX(-1.1rem);
+                }
+
+                &-right {
+                    width: fit-content;
+                    color: u.$c-DesaturatedDarkViolet;
+                    background-color: u.$c-White;
+                    border-radius: 1.2rem 1.2rem 0.4rem 1.2rem;
+                    box-shadow: 0 0.8rem 0.8rem 0 hsla(206, 6%, 79%, 0.2);
+
+                    &.rt1 {
+                        transform: scale(0.8) translateX(1rem);
+                    }
+
+                    &.rt2 {
+                        transform: scale(0.8) translateX(0.2rem);
+                    }
+                }             
+            }
+
+            .image {
+                width: auto;
+                height: 4rem;
+                margin: 0 0.8rem 0.3rem 0;
+                column-gap: 0.8rem;
+
+                .img {
+                    width: 4rem;
+                    height: 4rem;  
+                }
+                
+                .dog1 {
+                    background: url(../images/dog-image-1.jpg) center;
+                    background-size: cover;
+                    border-radius: 1rem;
+                }
+                
+                .dog2 {
+                    background: url(../images/dog-image-2.jpg) center;
+                    background-size: cover;
+                    border-radius: 1rem;
+                }
+
+                .dog3 {
+                    background: url(../images/dog-image-3.jpg) center;
+                    background-size: cover;
+                    border-radius: 1rem;     
+                }               
+            }
+
+            .price-info {
+                width: 20rem;
+                height: 4rem;
+                padding: 0 2rem 0 1rem;
+                background: u.$cg-LGtoRight;
+                color: rgb(244, 193, 255);
+                font-size: 1rem;
+                border-radius: 1.2rem 1.2rem 1.2rem 0.4rem;
+                transform: scale(0.8) translate(-1.6rem);
+
+                .circle {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50%;
+                    border: 0.1rem solid u.$c-VeryLightMagenta;
+                }
+
+                .hours {
+                    width: 10.5rem;
+                    margin-top: 0.1rem;
+                }
+
+                .price {
+                    color: u.$c-White;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+
+            // message form area
+            .form-area {
+                width: 100%;
+                height: 4rem;
+                
+                .input-area {
+                    width: 103%;
+                    height: 3.8rem;
+                    margin: 0.5rem 0 1rem 0;
+                    color: u.$c-GrayishBlue;
+                    font-size: 1rem;
+                    background-color: white;
+                    border-radius: 1.8rem;
+                    transform: scale(0.9) translateX(-0.4rem);
+                }
+
+                span {
+                    margin-left: 2rem;
+                }
+
+                .submit-btn {
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    margin-right: 0.5rem;
+                    background-color: u.$c-VeryDarkDesaturatedViolet;
+                    border-radius: 50%;
+
+                    .bx {
+                        color: u.$c-White;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// description
+.content_desc {
+    width: 44.5rem;
+    padding-left: 0.2rem;
+
+    @include u.bp(md) {
+        max-width: 30rem;
+        margin: 0 auto 7rem auto;
+        text-align: center;
+    }
+}
