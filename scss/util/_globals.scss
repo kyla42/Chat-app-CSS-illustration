@@ -16,6 +16,7 @@ $cg-LGtoRight: linear-gradient(to right, $cg-LightMagenta, $cg-LightViolet);
 // other colors
 $c-White: hsl(0, 0%, 100%);
 $c-LightGrayishViolet: hsl(270, 20%, 96%);
+$c-LightGrayishViolet2: hsl(0, 0%, 98%);
 $c-VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
 $c-VeryLightMagenta: hsl(289, 100%, 72%);
 
@@ -35,7 +36,7 @@ html {
 body {
     font-family: $f-rubik;
     font-size: 1.6rem;
-    background-color: $c-LightGrayishViolet;
+    background-color: $c-LightGrayishViolet2;
 }
 
 h1 {
