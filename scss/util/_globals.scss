@@ -54,8 +54,8 @@ p {
     padding-bottom: 0.3rem;
 }
 
-// flex
-.fx {
+// flex -extend
+%fx {
     display: flex;
 
     &-jc-c {
@@ -80,7 +80,7 @@ p {
     }
 }
 
-.fxcol {
+%fxcol {
     display: flex;
     flex-direction: column;
 

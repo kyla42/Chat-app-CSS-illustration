@@ -8,6 +8,7 @@
     background-color: u.$c-White;
     border-radius: 3rem;
     box-shadow: 0 2.5rem 4rem 0 hsla(271, 15%, 43%, 0.22);
+    display: flex;
 
     @include u.bp(md) {
         margin: 7rem auto;
@@ -55,6 +56,7 @@
                 .bx {
 
                     &-chevron-left {
+                        @extend %fx-ai-c;
                         justify-content: flex-end;
                         transform: scaleY(1.4);
                     }
@@ -66,6 +68,7 @@
     
                 .center {    
                     padding: 0 0.2rem;
+                    display: flex;
                     column-gap: 0.9rem;
     
                     img {
@@ -106,12 +109,14 @@
             .chat-right {
                 height: 11.5rem;
                 margin-top: 0.6rem;
+                @extend %fxcol-jc-sb;
                 align-items: flex-end;
             }
 
             .chat-left2 {
                 height: 13.5rem;
                 margin-top: 0.1rem;
+                @extend %fxcol-jc-sb;
             }
 
             .msg {
@@ -149,6 +154,7 @@
                 width: auto;
                 height: 4rem;
                 margin: 0 0.8rem 0.3rem 0;
+                display: flex;
                 column-gap: 0.8rem;
 
                 .img {
@@ -183,6 +189,7 @@
                 color: rgb(244, 193, 255);
                 font-size: 1rem;
                 border-radius: 1.2rem 1.2rem 1.2rem 0.4rem;
+                @extend %fx-jc-sb, %fx-ai-c;
                 transform: scale(0.8) translate(-1.6rem);
 
                 .circle {
@@ -217,6 +224,7 @@
                     font-size: 1rem;
                     background-color: white;
                     border-radius: 1.8rem;
+                    @extend %fx-jc-sb, %fx-ai-c;
                     transform: scale(0.9) translateX(-0.4rem);
                 }
 
@@ -230,6 +238,7 @@
                     margin-right: 0.5rem;
                     background-color: u.$c-VeryDarkDesaturatedViolet;
                     border-radius: 50%;
+                    @extend %fx-jcai-c;
 
                     .bx {
                         color: u.$c-White;
@@ -244,6 +253,7 @@
 .content_desc {
     width: 44.5rem;
     padding-left: 0.2rem;
+    @extend %fxcol-jc-c;
 
     @include u.bp(md) {
         max-width: 30rem;
